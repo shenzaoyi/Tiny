@@ -165,10 +165,11 @@ void test_easy() {
 //     std::cout << "\nAll tests passed!\n";  
 // }    
 int test_all() {
-    // 1. 读取当前目录下的二进制文件 "./app"
-    std::ifstream infile("./app", std::ios::binary);
+    // I make gpt write for me, not good at write&read file
+    // 1. 读取当前目录下的二进制文件 "./hello"
+    std::ifstream infile("./hello", std::ios::binary);
     if (!infile) {
-        std::cerr << "Error: Cannot open ./app" << std::endl;
+        std::cerr << "Error: Cannot open ./hello" << std::endl;
         return 1;
     }
     std::vector<char> buffer((std::istreambuf_iterator<char>(infile)), std::istreambuf_iterator<char>());
